@@ -37,7 +37,7 @@ X1 = (((-b) + mydis)/(2*a))
 X2 = (((-b) - mydis)/(2*a))
 
 # Print results to users
-print("Answer 1 = ",X1)
-print("Answer 2 = ",X2)
+print 'Answer 1 = ',X1
+print 'Answer 2 = ',X2
     
     
