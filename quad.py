@@ -6,11 +6,13 @@
 
 # import math for square root function
 import math
+# import sys for CLI Args
+import sys
 
 # Discriminant = (b^2-4(a)(c))
 def discriminant(a,b,c):
     # b^2 
-    b = math.pow(b, 2) 
+    b = math.pow(b, 2)
     # (b^2-4(a)(c))
     radicand = (b -((4)*(a)*(c)))
 
@@ -24,10 +26,16 @@ def discriminant(a,b,c):
     # return discriminant
     return dis
 
-# Prompt User for variables
-a = float(input("Enter a: "))
-b = float(input("Enter b: "))
-c = float(input("Enter c: "))
+# If a,b,c variables are given via command line
+if len(sys.argv) == 4:
+    a = float(sys.argv[1])
+    b = float(sys.argv[2])
+    c = float(sys.argv[3])
+# Else Prompt User for variables
+else:
+    a = float(input("Enter a: "))
+    b = float(input("Enter b: "))
+    c = float(input("Enter c: "))
 
 # get discriminant value from function
 mydis = discriminant(a,b,c)
